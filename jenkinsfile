@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('checkout') {
+            steps {
+                echo 'checking out from  git'
+                git 'https://github.com/Francis-88-cpu/Calculator.git'
+            }
+        }
+        stage('compile') {
+            steps {
+                echo 'compiling'
+                sh 'mvn compile'
+            }
+        }
+        stage('test') {
+            steps {
+                echo 'testing'
+                sh 'mvn test'
+            }
+        }
+        stage('package') {
+            steps {
+                echo 'packaging'
+                sh  'mvn package'
+            }
+        }
+    }
+}
