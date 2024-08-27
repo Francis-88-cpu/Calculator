@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('checkout') {
             steps {
-                echo 'checking out from  git'
+                echo 'checkout from git'
                 git 'https://github.com/Francis-88-cpu/Calculator.git'
             }
         }
