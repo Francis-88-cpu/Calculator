@@ -29,7 +29,7 @@ pipeline {
         stage('Docker build') {
             steps {
                 echo 'Docker build'
-                sh  'docker build -t fhoward688/Calculator-app:v3 .'
+                sh  'docker build -t fhoward688/calculator-app:v3 .'
             }
         }
         stage('Docker login') {
