@@ -29,7 +29,7 @@ pipeline {
         stage('Docker build') {
             steps {
                 echo 'Docker build'
-                sh  'docker build -t Calculator-app:v1 .'
+                sh  'docker build -t fhoward688/Calculator-app:v3 .'
             }
         }
         stage('Docker login') {
@@ -41,7 +41,7 @@ pipeline {
         stage('Docker push') {
             steps {
                 echo 'Docker push'
-                sh  'docker push fhoward688/calculator:v1'
+                sh  'docker push fhoward688/calculator:v3'
             }
         }
     }
