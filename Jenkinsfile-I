@@ -29,7 +29,7 @@ pipeline {
         stage('Docker login') {
             steps {
                 echo 'Docker login'
-                sh  'docker login -u fhoward688 -p dysQaj-6kajzy-cezqyf'
+                sh  'docker login -u fhoward688 -p --dysQaj-6kajzy-cezqyf-stdin'
             }
         }
     }
