@@ -26,10 +26,16 @@ pipeline {
                 sh  'mvn package'
             }
         }
+        stage('docker build') {
+            steps {
+                echo 'docker build'
+                sh'docker build -t Francis-88-cpu/calculator-app .'
+            }
+        }
         stage('Docker login') {
             steps {
                 echo 'Docker login'
-                sh  'docker login -u fhoward688 -p --dysQaj-6kajzy-cezqyf-stdin'
+                sh  'docker login -u fhoward688 -p dysQaj-6kajzy-cezqyf'
             }
         }
     }
